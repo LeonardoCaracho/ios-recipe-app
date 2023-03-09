@@ -23,11 +23,13 @@ struct RecipeDetailView: View {
                     .padding([.top, .leading], 20)
                     .font(.title)
                     .bold()
+                    .font(Font.custom("Avenir Heavy", size: 24))
                 
                 // MARK: Serving size picker
                 VStack(alignment: .leading) {
                     Text("Select your serving size:")
                         .font(.headline)
+                        .font(Font.custom("Avenir Heavy", size: 15))
                     
                     Picker("", selection: $selectedServingSize) {
                         Text("2").tag(2)
@@ -45,6 +47,7 @@ struct RecipeDetailView: View {
                     Text("Ingredients")
                         .font(.headline)
                         .padding([.bottom, .top], 5)
+                        .font(Font.custom("Avenir Heavy", size: 16))
                     
                     ForEach (recipe.ingredients) { ingredient in
                         let portion = RecipeModel.getPortion(
@@ -54,6 +57,7 @@ struct RecipeDetailView: View {
                         )
                         
                         Text("• \(portion) \(ingredient.name.lowercased())")
+                            .font(Font.custom("Avenir Heavy", size: 15))
                     }
                 }
                 .padding(.horizontal)
@@ -66,6 +70,7 @@ struct RecipeDetailView: View {
                     Text("Directions")
                         .font(.headline)
                         .padding([.bottom, .top], 5)
+                        .font(Font.custom("Avenir Heavy", size: 16))
                     
                     ForEach(0..<recipe.directions.count, id: \.self) { index in
                         Text("\(index+1). \(recipe.directions[index])")

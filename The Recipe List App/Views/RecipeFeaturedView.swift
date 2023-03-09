@@ -10,6 +10,7 @@ import SwiftUI
 struct RecipeFeaturedView: View {
     @EnvironmentObject var model:RecipeModel
     @State var isDetailViewShowing = false
+    @State var tabSelectionIndex = 0
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -18,9 +19,10 @@ struct RecipeFeaturedView: View {
                 .padding(.top, 40)
                 .font(.largeTitle)
                 .bold()
+                .font(Font.custom("Avenir Heavy", size: 24))
             
             GeometryReader { geo in
-                TabView {
+                TabView (selection: $tabSelectionIndex) {
                     ForEach (0..<model.recipes.count) { index in
                         let recipe = model.recipes[index]
                         if recipe.featured {
@@ -37,9 +39,11 @@ struct RecipeFeaturedView: View {
                                             .clipped()
                                         Text(recipe.name)
                                             .padding(5)
+                                            .font(Font.custom("Avenir Heavy", size: 15))
                                     }
                                 }
                             }
+                            .tag(index)
                             .sheet(isPresented: $isDetailViewShowing){
                                 RecipeDetailView(recipe: model.recipes[index])
                             }
@@ -57,13 +61,29 @@ struct RecipeFeaturedView: View {
             VStack(alignment: .leading, spacing: 10) {
                 Text("Preparation Time: ")
                     .font(.headline)
-                Text("1 hour")
+                    .font(Font.custom("Avenir Heavy", size: 16))
+                Text(model.recipes[tabSelectionIndex].prepTime)
+                    .font(Font.custom("Avenir Heavy", size: 15))
                 Text("Highlights")
                     .font(.headline)
-                Text("Healthy, Hearty")
+                    .font(Font.custom("Avenir Heavy", size: 15))
+                RecipeHighlights(
+                    highlights: model.recipes[tabSelectionIndex].highlights
+                )
             }
             .padding([.leading, .bottom])
         }
+        .onAppear(perform: {
+            setFeaturedIndex()
+        })
+    }
+    
+    func setFeaturedIndex() {
+        let index = model.recipes.firstIndex { (recipe) -> Bool in
+            return recipe.featured
+        }
+        
+        tabSelectionIndex = index ?? 0
     }
 }
 

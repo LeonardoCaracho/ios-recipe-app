@@ -17,6 +17,7 @@ struct RecipeListView: View {
                     .padding(.top, 40)
                     .font(.largeTitle)
                     .bold()
+                    .font(Font.custom("Avenir Heavy", size: 24))
                 
                 ScrollView {
                     LazyVStack(alignment: .leading) {
@@ -29,8 +30,14 @@ struct RecipeListView: View {
                                         .frame(width: 50, height: 50, alignment: .center)
                                         .clipped()
                                         .cornerRadius(5)
-                                    Text(recipe.name)
-                                        .foregroundColor(.black)
+                                    
+                                    VStack(alignment: .leading) {
+                                        Text(recipe.name)
+                                            .foregroundColor(.black)
+                                            .font(Font.custom("Avenir Heavy", size: 16))
+                                        RecipeHighlights(highlights: recipe.highlights)
+                                            .foregroundColor(.black)
+                                    }
                                 }
                             })
                         }

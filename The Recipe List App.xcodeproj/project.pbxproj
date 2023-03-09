@@ -10,6 +10,7 @@
 		4C44C23A29B5FE4C00001678 /* RecipeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C23929B5FE4C00001678 /* RecipeTabView.swift */; };
 		4C44C27129B7F26400001678 /* RecipeFeaturedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C27029B7F26400001678 /* RecipeFeaturedView.swift */; };
 		4C44C2F129B9DE0000001678 /* Rational.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C2F029B9DE0000001678 /* Rational.swift */; };
+		4C44C2F329BA5EC900001678 /* RecipeHighlights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C2F229BA5EC900001678 /* RecipeHighlights.swift */; };
 		4CE1E0B029B4D1D400D3B048 /* The_Recipe_List_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE1E0AF29B4D1D400D3B048 /* The_Recipe_List_App.swift */; };
 		4CE1E0B229B4D1D400D3B048 /* RecipeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE1E0B129B4D1D400D3B048 /* RecipeListView.swift */; };
 		4CE1E0B429B4D1D700D3B048 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CE1E0B329B4D1D700D3B048 /* Assets.xcassets */; };
@@ -25,6 +26,8 @@
 		4C44C23929B5FE4C00001678 /* RecipeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTabView.swift; sourceTree = "<group>"; };
 		4C44C27029B7F26400001678 /* RecipeFeaturedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeFeaturedView.swift; sourceTree = "<group>"; };
 		4C44C2F029B9DE0000001678 /* Rational.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rational.swift; sourceTree = "<group>"; };
+		4C44C2F229BA5EC900001678 /* RecipeHighlights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeHighlights.swift; sourceTree = "<group>"; };
+		4C44C2F429BAA6F500001678 /* The-Recipe-List-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "The-Recipe-List-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		4CE1E0AC29B4D1D400D3B048 /* The Recipe List App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Recipe List App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CE1E0AF29B4D1D400D3B048 /* The_Recipe_List_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Recipe_List_App.swift; sourceTree = "<group>"; };
 		4CE1E0B129B4D1D400D3B048 /* RecipeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListView.swift; sourceTree = "<group>"; };
@@ -75,6 +78,7 @@
 		4CE1E0AE29B4D1D400D3B048 /* The Recipe List App */ = {
 			isa = PBXGroup;
 			children = (
+				4C44C2F429BAA6F500001678 /* The-Recipe-List-App-Info.plist */,
 				4CE1E0AF29B4D1D400D3B048 /* The_Recipe_List_App.swift */,
 				4C44C2EF29B9DDEA00001678 /* Utils */,
 				4CE1E0C129B4D25100D3B048 /* Data */,
@@ -103,6 +107,7 @@
 				4CE1E0CA29B5236B00D3B048 /* RecipeDetailView.swift */,
 				4C44C23929B5FE4C00001678 /* RecipeTabView.swift */,
 				4C44C27029B7F26400001678 /* RecipeFeaturedView.swift */,
+				4C44C2F229BA5EC900001678 /* RecipeHighlights.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -212,6 +217,7 @@
 			files = (
 				4CE1E0C529B4D3BE00D3B048 /* Recipe.swift in Sources */,
 				4CE1E0CB29B5236B00D3B048 /* RecipeDetailView.swift in Sources */,
+				4C44C2F329BA5EC900001678 /* RecipeHighlights.swift in Sources */,
 				4C44C2F129B9DE0000001678 /* Rational.swift in Sources */,
 				4CE1E0C729B4D50400D3B048 /* RecipeModel.swift in Sources */,
 				4CE1E0B229B4D1D400D3B048 /* RecipeListView.swift in Sources */,
@@ -349,6 +355,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"The Recipe List App/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "The-Recipe-List-App-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -377,6 +384,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"The Recipe List App/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "The-Recipe-List-App-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
