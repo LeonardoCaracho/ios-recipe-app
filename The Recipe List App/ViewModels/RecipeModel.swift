@@ -59,4 +59,8 @@ class RecipeModel: ObservableObject {
         
         return portion
     }
+    
+    func getFeaturedRecipes() -> [Recipe] {
+        return recipes.filter({ $0.featured })
+    }
 }
